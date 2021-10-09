@@ -1,6 +1,6 @@
 <?php
 
-$str = 'Если ты будешь злиться на меня каждый раз, когда я делаю глупость, мне придется прекратить делать глупости';
+$str = readline('Введите текст: ');
 
 function firstLetters(string $str): array
 {
@@ -8,7 +8,7 @@ function firstLetters(string $str): array
 
     $tempArray = explode(' ', $str);
     foreach ($tempArray as $item) {
-        array_push($resultArray, mb_strtolower(substr($item, 0, 2)));
+        array_push($resultArray, mb_strtolower(mb_substr($item, 0, 1)));
     }
 
     $uniqueNumbers = array_unique($resultArray);
